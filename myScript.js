@@ -213,7 +213,7 @@ function myMin(arr) {
 //sort 
 
 const myCars = [
-    {type:"volvo", year:2018},
+  {type:"volvo", year:2018},
 	{type:"mercedes", year:2020},
 	{type:"fiat", year:2008}
 ];
@@ -233,8 +233,8 @@ function myFucar() {
 //sort
 
 const myCars2 = [
-    {type:"volvo", year:2018},
-	{type:"mercedes", year:2020},
+  {type:"volvo", year:2018},
+	{type:"mercedes", year:2022},
 	{type:"fiat", year:2008}
 ];
 
@@ -244,8 +244,8 @@ function myFunctionCars() {
 	myCars2.sort(function(a, b){
 	let x = a.type.toLowerCase();
 	let y = b.type.toLowerCase();
-	if (x > y) {return -1;}
-	if (x < y) {return 1;}
+	if (x < y) {return -1;}
+	if (x > y) {return 1;}
 	return 0;
     });
 	myAtos();
@@ -256,4 +256,37 @@ function myAtos() {
 	myCars2[0].type + " " + myCars2[0].year + "<br>" +
 	myCars2[1].type + " " + myCars2[1].year + "<br>" +
 	myCars2[2].type + " " + myCars2[2].year;
+}
+
+//sort
+
+
+const myPhone = [
+	{iphone: '11', price: 50},
+	{iphone: '13', price: 110},
+	{iphone: '12', price: 70},
+	{iphone: '15', price: 220},
+	{iphone: '14', price: 150}
+];
+
+phoneFunction();
+
+function funPhonePrice() {
+  myPhone.sort(function(a, b){
+    let x = a.iphone.toLowerCase();
+	  let y = b.iphone.toLowerCase();
+	  if (x < y) {return -1;}
+	  if (x > y) {return 1;}
+	  return 0;
+	});
+	phoneFunction();
+}
+
+function phoneFunction() {
+  document.getElementById('name7').innerHTML =
+	myPhone[0].iphone + " price: " + myPhone[0].price + "<br>" +
+	myPhone[1].iphone + " price: " + myPhone[1].price + "<br>" +
+	myPhone[2].iphone + " price: " + myPhone[2].price + "<br>" +
+	myPhone[3].iphone + " price: " + myPhone[3].price + "<br>" +
+	myPhone[4].iphone + " price: " + myPhone[4].price
 }
