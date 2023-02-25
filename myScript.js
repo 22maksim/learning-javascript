@@ -210,7 +210,7 @@ function myMin(arr) {
 	return min;
 }
 
-//sort 
+//arr.sort()
 
 const myCars = [
   {type:"volvo", year:2018},
@@ -220,7 +220,7 @@ const myCars = [
 
 myFucar();
 
-myCars.sort(function(a, b){a.year - b.year});
+myCars.sort(function(a, b){return a.year - b.year});
 myFucar();
 
 function myFucar() {
@@ -230,7 +230,7 @@ function myFucar() {
 	myCars[2].type + " " + myCars[2].year;
 }
 
-//sort
+//arr.sort()
 
 const myCars2 = [
   {type:"volvo", year:2018},
@@ -258,7 +258,7 @@ function myAtos() {
 	myCars2[2].type + " " + myCars2[2].year;
 }
 
-//sort
+//arr.sort()
 
 
 const myPhone = [
@@ -290,3 +290,57 @@ function phoneFunction() {
 	myPhone[3].iphone + " price: " + myPhone[3].price + "<br>" +
 	myPhone[4].iphone + " price: " + myPhone[4].price
 }
+
+//arr.map()
+
+const myNumbers = [33, 46, 98, 11, 115, 15];
+const myNumbers2 = myNumbers.map(myFunctionNumbers);
+
+document.getElementById('name8').innerHTML = myNumbers2;
+
+function myFunctionNumbers(value) {
+	return value * 2;
+}
+
+// arr.filter()
+
+const myYear = [1985, 2015, 2022, 2030, 2058, 2011, 2156, 2001, 1991];
+const sortYears = myYear.filter(filterYears);
+const sortYears2 = myYear.filter(filterYears2);
+
+document.getElementById('name9').innerHTML = sortYears;
+document.getElementById('name10').innerHTML = sortYears2;
+
+function filterYears(value) {
+	return value < 2023;
+}
+
+function filterYears2(value){
+	return value > 2021;
+}
+
+//arr.reduce()
+
+const myMany = [135, 65, 87, 33, 14, 18, 3];
+let manyReduce = myMany.reduce(functionMyMany);
+let manyReduce2 = myMany.reduce(functionMyMany2, 100);
+
+document.getElementById('name11').innerHTML = manyReduce;
+document.getElementById('name12').innerHTML = manyReduce2;
+
+function functionMyMany(total, value) {
+	return total + value;
+}
+
+function functionMyMany2(total, value) {
+	return total - value;
+}
+
+//another variant arr.reduce()
+
+const arrCif = [1, 2, 3, 4, 5];
+
+const initialValue = 0;
+const sumWithInitial = arrCif.reduce(
+	(accumulator, currentValue) => accumulator + currentValue, initialValue
+);
