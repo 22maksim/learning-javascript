@@ -380,11 +380,44 @@ for (let x of linksKeys) {
 
 document.getElementById('name14').innerHTML = textKeys;
 
-//Array.entries()
+//Array.entries() includes()
 
 const mixFruits = ["Banana", "Orange", "Kiwi", "an lemon", "an Apple"];
 const fMix = mixFruits.entries();
 
 for (let x of fMix) {
-	document.getElementById('name15').innerHTML += x + "<br>";
+	document.getElementById('name15').innerHTML += "значение: " + x + "<br>";
 }
+console.log(mixFruits.includes("Mango"));
+
+//Array.spread(...)
+
+const s1 = ['yan', 'fev', 'mart'];
+const s2 = ['in', 'il', 'au'];
+const s3 = ['sen', 'oct', 'now'];
+const s4 = ['dec', 'mon', 'din'];
+const s5 = ['fir', 'sun', 'str'];
+const s6 = ['BY'];
+
+const arraySpread = [...s3, ...s2, ...s5, ...s4, ...s3, ...s2, ...s2, ...s6, ...s6, ...s6];
+document.getElementById('name16').innerHTML = arraySpread;
+
+//Date
+
+const d = new Date();
+d.setFullYear(2020);
+document.getElementById('name17').innerHTML = d.toDateString();
+
+// ==Date
+
+let textDate;
+const myTime = new Date();
+const mySometime = new Date();
+mySometime.setFullYear(2010, 3, 11);
+
+if (myTime > mySometime) {
+	text = "Today is before Jan 14, 2100.";
+} else {
+	text = 'Today is after Jan 14, 2100.';
+}
+console.log(text);
