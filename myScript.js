@@ -288,7 +288,7 @@ function phoneFunction() {
 	myPhone[1].iphone + " price: " + myPhone[1].price + "<br>" +
 	myPhone[2].iphone + " price: " + myPhone[2].price + "<br>" +
 	myPhone[3].iphone + " price: " + myPhone[3].price + "<br>" +
-	myPhone[4].iphone + " price: " + myPhone[4].price
+	myPhone[4].iphone + " price: " + myPhone[4].price;
 }
 
 //arr.map()
@@ -344,3 +344,47 @@ const initialValue = 0;
 const sumWithInitial = arrCif.reduce(
 	(accumulator, currentValue) => accumulator + currentValue, initialValue
 );
+
+//arr.every()
+
+const oneNumbers = [14, 12, 10, 3, 5];
+let allover18 = oneNumbers.every(oneNumber);
+
+function oneNumber(value, index, array) {
+	return value > 10;
+}
+console.log(allover18);
+
+//arr.indexOf()
+
+const fruitsMy = ["apple", "avocado", "orange", "an lemon"];
+let positionFruit = fruitsMy.indexOf("orange") + 1;
+
+console.log(positionFruit);
+
+//Array.from()
+
+const myAlf = Array.from("12 + 10");
+
+console.log(myAlf);
+
+//Array.keys()
+
+const linksFruits = ["Orange", "an Lemon", "Kiwi"];
+const linksKeys = linksFruits.keys();
+
+let textKeys = "";
+for (let x of linksKeys) {
+	textKeys += x + '<br>';
+}
+
+document.getElementById('name14').innerHTML = textKeys;
+
+//Array.entries()
+
+const mixFruits = ["Banana", "Orange", "Kiwi", "an lemon", "an Apple"];
+const fMix = mixFruits.entries();
+
+for (let x of fMix) {
+	document.getElementById('name15').innerHTML += x + "<br>";
+}
