@@ -364,7 +364,7 @@ console.log(positionFruit);
 
 //Array.from()
 
-const myAlf = Array.from("12 + 10");
+const myAlf = Array.from(12 + 10);
 
 console.log(myAlf);
 
@@ -388,7 +388,7 @@ const fMix = mixFruits.entries();
 for (let x of fMix) {
 	document.getElementById('name15').innerHTML += "значение: " + x + "<br>";
 }
-console.log(mixFruits.includes("Mango"));
+console.log(mixFruits.includes("Kiwi"));
 
 //Array.spread(...)
 
@@ -411,13 +411,30 @@ document.getElementById('name17').innerHTML = d.toDateString();
 // ==Date
 
 let textDate;
+let text2;
 const myTime = new Date();
 const mySometime = new Date();
 mySometime.setFullYear(2010, 3, 11);
 
-if (myTime > mySometime) {
-	text = "Today is before Jan 14, 2100.";
+if (myTime < mySometime) {
+	text2 = "Today is before Jan 14, 2100.";
 } else {
-	text = 'Today is after Jan 14, 2100.';
+	text2 = 'Today is after Jan 14, 2100.';
 }
-console.log(text);
+console.log(text2);
+
+
+//map
+
+const myArrayFruits = [10, 11, 3, 4, 87, 90];
+
+let mySort = myArrayFruits.map(item => {
+	return 10 + item * 1.8;
+});
+console.log(mySort);
+
+let sortMy = myArrayFruits.map((item, index) => {
+	return index + ': ' + item;
+});
+ console.log(sortMy);
+//
