@@ -426,15 +426,55 @@ console.log(text2);
 
 //map
 
-const myArrayFruits = [10, 11, 3, 4, 87, 90];
+const myArrayTemp = [10, 11, 3, 4, 87, 90];
 
-let mySort = myArrayFruits.map(item => {
+let mySort = myArrayTemp.map(item => {
 	return 10 + item * 1.8;
 });
 console.log(mySort);
 
-let sortMy = myArrayFruits.map((item, index) => {
+let sortMy = myArrayTemp.map((item, index) => {
 	return index + ': ' + item;
 });
  console.log(sortMy);
-//
+
+//More use to ".map". 
+ 
+const a1 = [1, 3, 5, 7, 88, 11], 
+			a3 = [4, 1, 3, 4, 5];
+let a1_res;
+
+//Another one. map
+const a2 = [1, 3, 5, 7, 88, 11];
+a2[10] = 8;
+
+function myFunctionOperation(value) {
+a1_res = value.map(item => item * 2);
+console.log(value);
+console.log(a1_res);
+}
+
+function myFunctionOperation2(value) {
+	a1[2] = 10;
+a1_res = value.map(item => item * 2);
+console.log(value);
+console.log(a1_res);
+}
+
+//Another one. map
+//если больше или ноль то записываем  в массив. меньше записываем ноль
+//вывести оба массива в консоль.
+const a4 = [10, -23, 33, 4, -3, 6];
+let a4_total;
+
+function f1 (str) {
+  a4_total = str.map ((value) => {
+		if (value >= 0)  {
+			return value;
+		} else {
+			return 0;
+		}
+})
+console.log(a4);
+console.log(a4_total);
+}
